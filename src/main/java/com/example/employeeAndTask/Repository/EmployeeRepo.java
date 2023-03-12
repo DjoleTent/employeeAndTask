@@ -35,7 +35,7 @@ public interface EmployeeRepo extends JpaRepository<Employee, UUID> {
             "FROM employee2 e\n" +
             "JOIN department d ON e.department_id = d.department_id\n" +
             "GROUP BY d.name", nativeQuery = true)
-    
+
     List<?> averageByDep();
 
 }

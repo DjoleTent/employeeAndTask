@@ -104,7 +104,9 @@ public class EmployeeTaskController {
         for(var dep:employeeAndTaskService.findAllD()){
             count++;
         }
-        return "There are " + count + " departments";
+        if (count>0){
+            return "There are " + count + " departments";
+        } else return "There isn't any department";
     }
 
     @GetMapping("/api/avgByDep")
